@@ -1,0 +1,6 @@
+URL de téléchargement du fichier ZIP E-Phy (Windows-1252):
+https://www.data.gouv.fr/api/1/datasets/r/98f7cac6-6b29-4859-8739-51b825196959
+
+Nom du fichier: decisionamm-intrant-format-csv-20260121-windows-1252.zip
+Contient: produits_Windows-1252.csv et autres fichiers CSV
+Mise à jour: 21 janvier 2026
