@@ -56,8 +56,7 @@ const config: ExpoConfig = {
   plugins: [
     "expo-asset",
     "expo-router",
-    "react-native-iap",
-    [
+        [
       "expo-audio",
       {
         microphonePermission: "Allow $(PRODUCT_NAME) to access your microphone.",
