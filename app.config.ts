@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "PhytoCheck",
   slug: "phyto-check-app",
-  version: "1.0.8",
+  version: "1.0.10",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   scheme: "manus20260124063946",
@@ -17,7 +17,7 @@ const config: ExpoConfig = {
     },
   },
   android: {
-    versionCode: 1,
+    versionCode: 20,
     adaptiveIcon: {
       backgroundColor: "#FFFFFF",
       foregroundImage: "./assets/images/android-icon-foreground.png",
@@ -28,7 +28,7 @@ const config: ExpoConfig = {
     predictiveBackGestureEnabled: false,
     package: "space.manus.phyto.check.app.t20260124063946",
     permissions: [
-      "POST_NOTIFICATIONS",
+      "POST_NOTIFICATIONS", "com.android.vending.BILLING", "android.permission.CAMERA", "android.permission.READ_EXTERNAL_STORAGE",
       "com.android.vending.BILLING",
       "android.permission.RECORD_AUDIO",
       "android.permission.MODIFY_AUDIO_SETTINGS",
