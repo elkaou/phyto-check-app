@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "PhytoCheck",
   slug: "phyto-check-app",
-  version: "1.0.10",
+  version: "1.0.11",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   scheme: "manus20260124063946",
@@ -17,9 +17,9 @@ const config: ExpoConfig = {
     },
   },
   android: {
-    versionCode: 20,
+    versionCode: 21,
 
-    versionCode: 2,
+    versionCode: 3,
 
     adaptiveIcon: {
       backgroundColor: "#FFFFFF",
@@ -104,6 +104,20 @@ const config: ExpoConfig = {
     },
   },
 };
+[
+  "expo-build-properties",
+  {
+    android: {
+      buildArchs: ["armeabi-v7a", "arm64-v8a"],
+      minSdkVersion: 24,
+      enableProguardObfuscation: true,
+      extraMavenRepos: ["https://maven.google.com"],
+      gradleProperties: {
+        "com.android.billingclient.version": "6.0.1",
+      },
+    },
+  },
+],
 
 [
   "expo-build-properties",
