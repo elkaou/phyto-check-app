@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "PhytoCheck",
   slug: "phyto-check-app",
-  version: "1.0.10",
+  version: "1.0.11",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   scheme: "manus20260124063946",
@@ -17,9 +17,9 @@ const config: ExpoConfig = {
     },
   },
   android: {
-    versionCode: 20,
+    versionCode: 21,
 
-    versionCode: 2,
+    versionCode: 3,
 
     adaptiveIcon: {
       backgroundColor: "#FFFFFF",
