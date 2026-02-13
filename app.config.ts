@@ -16,11 +16,8 @@ const config: ExpoConfig = {
       ITSAppUsesNonExemptEncryption: false,
     },
   },
-  android: {
-    versionCode: 21,
-
-    versionCode: 3,
-
+    android: {
+    versionCode: 20,
     adaptiveIcon: {
       backgroundColor: "#FFFFFF",
       foregroundImage: "./assets/images/android-icon-foreground.png",
@@ -31,8 +28,10 @@ const config: ExpoConfig = {
     predictiveBackGestureEnabled: false,
     package: "space.manus.phyto.check.app.t20260124063946",
     permissions: [
-      "POST_NOTIFICATIONS", "com.android.vending.BILLING", "android.permission.CAMERA", "android.permission.READ_EXTERNAL_STORAGE",
+      "POST_NOTIFICATIONS",
       "com.android.vending.BILLING",
+      "android.permission.CAMERA",
+      "android.permission.READ_EXTERNAL_STORAGE",
       "android.permission.RECORD_AUDIO",
       "android.permission.MODIFY_AUDIO_SETTINGS",
     ],
@@ -51,6 +50,7 @@ const config: ExpoConfig = {
       },
     ],
   },
+
   web: {
     bundler: "metro",
     output: "static",
@@ -104,21 +104,6 @@ const config: ExpoConfig = {
     },
   },
 };
-[
-  "expo-build-properties",
-  {
-    android: {
-      buildArchs: ["armeabi-v7a", "arm64-v8a"],
-      minSdkVersion: 24,
-      enableProguardObfuscation: true,
-      extraMavenRepos: ["https://maven.google.com"],
-      gradleProperties: {
-        "com.android.billingclient.version": "6.0.1",
-      },
-    },
-  },
-],
-
 [
   "expo-build-properties",
   {
