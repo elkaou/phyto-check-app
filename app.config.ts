@@ -19,9 +19,7 @@ const config: ExpoConfig = {
   android: {
     versionCode: 21,
 
-    versionCode: 3,
-
-    adaptiveIcon: {
+      adaptiveIcon: {
       backgroundColor: "#FFFFFF",
       foregroundImage: "./assets/images/android-icon-foreground.png",
       backgroundImage: "./assets/images/android-icon-background.png",
@@ -104,21 +102,6 @@ const config: ExpoConfig = {
     },
   },
 };
-[
-  "expo-build-properties",
-  {
-    android: {
-      buildArchs: ["armeabi-v7a", "arm64-v8a"],
-      minSdkVersion: 24,
-      enableProguardObfuscation: true,
-      extraMavenRepos: ["https://maven.google.com"],
-      gradleProperties: {
-        "com.android.billingclient.version": "6.0.1",
-      },
-    },
-  },
-],
-
 [
   "expo-build-properties",
   {
