@@ -104,5 +104,19 @@ const config: ExpoConfig = {
     },
   },
 };
+[
+  "expo-build-properties",
+  {
+    android: {
+      buildArchs: ["armeabi-v7a", "arm64-v8a"],
+      minSdkVersion: 24,
+      enableProguardObfuscation: true,
+      extraMavenRepos: ["https://maven.google.com"],
+      gradleProperties: {
+        "com.android.billingclient.version": "6.0.1",
+      },
+    },
+  },
+],
 
 export default config;
