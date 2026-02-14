@@ -96,6 +96,7 @@ const config: ExpoConfig = {
           enableProguardObfuscation: true,
           extraMavenRepos: ["https://maven.google.com"],
           gradleProperties: {
+            "react.native.iap.store": "play",
             "com.google.android.play.billingclient.version": "6.0.1",
           },
         },
