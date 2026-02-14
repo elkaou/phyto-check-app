@@ -32,7 +32,6 @@ const config: ExpoConfig = {
     package: "space.manus.phyto.check.app.t20260124063946",
     permissions: [
       "POST_NOTIFICATIONS",
-      "com.android.vending.BILLING",
       "android.permission.CAMERA",
       "android.permission.READ_EXTERNAL_STORAGE",
       "android.permission.RECORD_AUDIO",
