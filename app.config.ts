@@ -96,7 +96,7 @@ const config: ExpoConfig = {
           enableProguardObfuscation: true,
           extraMavenRepos: ["https://maven.google.com"],
           gradleProperties: {
-            "com.android.billingclient.version": "6.0.1",
+            "com.google.android.billingclient.version": "6.0.1",
           },
         },
       },
