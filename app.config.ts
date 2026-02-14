@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "PhytoCheck",
   slug: "phyto-check-app",
-  version: "1.0.11",
+  version: "1.0.12",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   scheme: "manus20260124063946",
@@ -16,9 +16,12 @@ const config: ExpoConfig = {
       ITSAppUsesNonExemptEncryption: false,
     },
   },
-    android: {
-    versionCode: 20,
-    adaptiveIcon: {
+
+  android: {
+    versionCode: 22,
+
+      adaptiveIcon: {
+
       backgroundColor: "#FFFFFF",
       foregroundImage: "./assets/images/android-icon-foreground.png",
       backgroundImage: "./assets/images/android-icon-background.png",
@@ -56,10 +59,10 @@ const config: ExpoConfig = {
     output: "static",
     favicon: "./assets/images/favicon.png",
   },
-  plugins: [
+    plugins: [
     "expo-asset",
     "expo-router",
-        [
+    [
       "expo-audio",
       {
         microphonePermission: "Allow $(PRODUCT_NAME) to access your microphone.",
@@ -90,10 +93,16 @@ const config: ExpoConfig = {
         android: {
           buildArchs: ["armeabi-v7a", "arm64-v8a"],
           minSdkVersion: 24,
+          enableProguardObfuscation: true,
+          extraMavenRepos: ["https://maven.google.com"],
+          gradleProperties: {
+            "com.android.billingclient.version": "6.0.1",
+          },
         },
       },
     ],
   ],
+
   experiments: {
     typedRoutes: true,
     reactCompiler: true,
@@ -104,6 +113,7 @@ const config: ExpoConfig = {
     },
   },
 };
+<<<<<<< HEAD
 [
   "expo-build-properties",
   {
@@ -118,6 +128,8 @@ const config: ExpoConfig = {
     },
   },
 ],
+=======
+>>>>>>> b2cf3954c762facc0e3790f3b2a6f73dc9e0ccf5
 
 
 export default config;
