@@ -17,7 +17,7 @@ import {
 import type { EdgeInsets, Metrics, Rect } from "react-native-safe-area-context";
 
 import { trpc, createTRPCClient } from "@/lib/trpc";
-import { initManusRuntime, subscribeSafeAreaInsets } from "@/lib/_core/manus-runtime";
+//import { initManusRuntime, subscribeSafeAreaInsets } from "@/lib/_core/manus-runtime";
 
 const DEFAULT_WEB_INSETS: EdgeInsets = { top: 0, right: 0, bottom: 0, left: 0 };
 const DEFAULT_WEB_FRAME: Rect = { x: 0, y: 0, width: 0, height: 0 };
@@ -35,7 +35,7 @@ export default function RootLayout() {
 
   // Initialize Manus runtime for cookie injection from parent container
   useEffect(() => {
-    initManusRuntime();
+  //  initManusRuntime();
   }, []);
 
   const handleSafeAreaUpdate = useCallback((metrics: Metrics) => {
@@ -43,11 +43,11 @@ export default function RootLayout() {
     setFrame(metrics.frame);
   }, []);
 
-  useEffect(() => {
-    if (Platform.OS !== "web") return;
-    const unsubscribe = subscribeSafeAreaInsets(handleSafeAreaUpdate);
-    return () => unsubscribe();
-  }, [handleSafeAreaUpdate]);
+  //useEffect(() => {
+    //if (Platform.OS !== "web") return;
+    //const unsubscribe = subscribeSafeAreaInsets(handleSafeAreaUpdate);
+    //return () => unsubscribe();
+  //}, [handleSafeAreaUpdate]);
 
   // Create clients once and reuse them
   const [queryClient] = useState(
