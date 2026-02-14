@@ -54,10 +54,10 @@ const config: ExpoConfig = {
     output: "static",
     favicon: "./assets/images/favicon.png",
   },
-  plugins: [
+    plugins: [
     "expo-asset",
     "expo-router",
-        [
+    [
       "expo-audio",
       {
         microphonePermission: "Allow $(PRODUCT_NAME) to access your microphone.",
@@ -88,10 +88,16 @@ const config: ExpoConfig = {
         android: {
           buildArchs: ["armeabi-v7a", "arm64-v8a"],
           minSdkVersion: 24,
+          enableProguardObfuscation: true,
+          extraMavenRepos: ["https://maven.google.com"],
+          gradleProperties: {
+            "com.android.billingclient.version": "6.0.1",
+          },
         },
       },
     ],
   ],
+
   experiments: {
     typedRoutes: true,
     reactCompiler: true,
@@ -102,20 +108,6 @@ const config: ExpoConfig = {
     },
   },
 };
-[
-  "expo-build-properties",
-  {
-    android: {
-      buildArchs: ["armeabi-v7a", "arm64-v8a"],
-      minSdkVersion: 24,
-      enableProguardObfuscation: true,
-      extraMavenRepos: ["https://maven.google.com"],
-      gradleProperties: {
-        "com.android.billingclient.version": "6.0.1",
-      },
-    },
-  },
-],
 
 
 export default config;
