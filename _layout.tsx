@@ -63,7 +63,7 @@ export default function RootLayout() {
         },
       }),
   );
-  const [trpcClient] = useState(() => createTRPCClient());
+  //const [trpcClient] = useState(() => createTRPCClient());
 
   // Ensure minimum 8px padding for top and bottom on mobile
   const providerInitialMetrics = useMemo(() => {
