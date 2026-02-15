@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "PhytoCheck",
   slug: "phyto-check-app",
-  version: "1.0.15",
+  version: "1.0.19",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   scheme: "manus20260124063946",
@@ -18,7 +18,7 @@ const config: ExpoConfig = {
   },
 
   android: {
-    versionCode: 21015,
+    versionCode: 21019,
 
       adaptiveIcon: {
 
@@ -32,7 +32,6 @@ const config: ExpoConfig = {
     package: "space.manus.phyto.check.app.t20260124063946",
     permissions: [
       "POST_NOTIFICATIONS",
-      "com.android.vending.BILLING",
       "android.permission.CAMERA",
       "android.permission.READ_EXTERNAL_STORAGE",
       "android.permission.RECORD_AUDIO",
@@ -59,6 +58,10 @@ const config: ExpoConfig = {
     output: "static",
     favicon: "./assets/images/favicon.png",
   },
+updates: {
+  enabled: false,
+},
+
     plugins: [
     "expo-asset",
     "expo-router",
@@ -96,6 +99,7 @@ const config: ExpoConfig = {
           enableProguardObfuscation: true,
           extraMavenRepos: ["https://maven.google.com"],
           gradleProperties: {
+            "react.native.iap.store": "play",
             "com.google.android.play.billingclient.version": "6.0.1",
           },
         },
