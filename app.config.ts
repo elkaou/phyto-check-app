@@ -58,9 +58,12 @@ const config: ExpoConfig = {
     output: "static",
     favicon: "./assets/images/favicon.png",
   },
-updates: {
-  enabled: false,
-},
+   updates: {
+    enabled: false,
+    checkOnLaunch: "never",
+    fallbackToCacheTimeout: 0,
+  },
+
 
     plugins: [
     "expo-asset",
