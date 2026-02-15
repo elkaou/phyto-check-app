@@ -34,9 +34,9 @@ export default function RootLayout() {
   const [frame, setFrame] = useState<Rect>(initialFrame);
 
   // Initialize Manus runtime for cookie injection from parent container
-  useEffect(() => {
-  //  initManusRuntime();
-  }, []);
+  //useEffect(() => {
+   // initManusRuntime();
+  //}, []);
 
   const handleSafeAreaUpdate = useCallback((metrics: Metrics) => {
     setInsets(metrics.insets);
@@ -44,9 +44,9 @@ export default function RootLayout() {
   }, []);
 
   //useEffect(() => {
-    //if (Platform.OS !== "web") return;
-    //const unsubscribe = subscribeSafeAreaInsets(handleSafeAreaUpdate);
-    //return () => unsubscribe();
+  //  if (Platform.OS !== "web") return;
+  //  const unsubscribe = subscribeSafeAreaInsets(handleSafeAreaUpdate);
+  //  return () => unsubscribe();
   //}, [handleSafeAreaUpdate]);
 
   // Create clients once and reuse them
