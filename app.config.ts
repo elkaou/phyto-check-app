@@ -115,10 +115,12 @@ const config: ExpoConfig = {
     reactCompiler: true,
   },
   extra: {
-    eas: {
-      projectId: "366c8baa-a454-4a19-82da-461484174545",
-    },
+  eas: {
+    projectId: "366c8baa-a454-4a19-82da-461484174545",
   },
+  EXPO_ROUTER_APP_ROOT: ".",
+},
+
 };
 
 export default config;
