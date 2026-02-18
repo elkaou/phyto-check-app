@@ -1,0 +1,1 @@
+eas build --platform android --profile production --clear-cache  //RELANCE LE BUILD EN APK
